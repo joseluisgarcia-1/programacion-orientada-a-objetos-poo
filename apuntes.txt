@@ -1,9 +1,62 @@
 - Módulo Bienvenida e Introducción
 ***Clase 1 ¿Por qué aprender Programación Orientada a Objetos?***
 
+- Vas a programar más rápido. Tener un análisis previo de lo que estás realizando te ayudará a generar código mucho más veloz
+
+- Dejas de ser Programador Jr. Podrás responder preguntas como ¿Qué es encapsulamiento?, ¿Qué es Abstracción?, ¿Qué es Herencia?, ¿Qué es Polimorfismo? 
+en futuras entrevistas de trabajo
+
+- Dejar de Copiar y Pegar Código.
+
+La programación orientada a objetos tiene cuatro características principales:
+
+- Encapsulamiento. 
+    - Quiere decir que oculta datos mediante código.
+- Abstracción. 
+    - Es como se pueden representar los objetos en modo de código.
+- Herencia. 
+    - Es donde una clase nueva se crea a partir de una clase existente.
+- Polimorfismo.
+    - Se refiere a la propiedad por la que es posible enviar mensajes sintácticamente iguales a objetos de tipos distintos.
+En este curso, los pasos a seguir será.
+Analisis
+Plasmar
+Programar
+La mayoría solo aprende a hacer esto en un lenguajes de programación,aquí se tiene una variabilidad.
+
 ***Clase 2 ¿Qué resuelve la Programación Orientada a Objetos?***
 
+La programación orientada a objetos nos ayuda a tapar o resolver muchos de los huecos que ha dejado la programación estructurada
+La programación Orientada a Objetos nace de los problemas creados por la programación estructurada y nos ayuda a resolver cierto problemas como:
+
+Código muy largo: A medida que un sistema va creciendo y se hace más robusta el código generado se vuelve muy extenso haciéndose difícil de leer, depurar, mantener.
+
+Si algo falla, todo se rompe: Ya que con la programación estructurada el código se ejecuta secuencialmente al momento de que una de esas líneas fallara todo lo demás 
+deja de funcionar.
+
+Difícil de mantener.
+
+La POO Nos va a simplificar la programación
+
 ***Clase 3 Paradigma Orientado a Objetos***
+
+La Programación Orientada a Objetos viene de una filosofía o forma de pensar que es la Orientación a Objetos y 
+esto surge a partir de los problemas que necesitamos plasmar en código.
+
+Es analizar un problema en forma de objetos para después llevarlo a código, eso es la Orientación a Objetos.
+
+Un paradigma es una teoría que suministra la base y modelo para resolver problemas. La paradigma de Programación Orientada a Objetos se compone de 4 elementos:
+
+Clases
+Propiedades
+Métodos
+Objetos
+Y 4 Pilares:
+
+Encapsulamiento
+Abstracción
+Herencia
+Polimorfismo
 
 ***Clase 4 Lenguajes Orientados a Objetos***
 
@@ -52,7 +105,6 @@
 ***Clase 24 JavaScript orientado a objetos, lo más nuevo***
 
 ***Clase 25 Declarando un método constructor en Python***
-
 
 - Módulo Herencia
 ***Clase 26 Aplicando herencia en lenguaje Java y PHP***
