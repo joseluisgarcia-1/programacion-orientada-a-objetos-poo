@@ -1,3 +1,84 @@
-***Clase 1 Introduccion a la programacion orientada a objetos***
+Bienvenida e Introducción
+¿Por qué aprender Programación Orientada a Objetos?
 
-***Clase 2
+¿Qué resuelve la Programación Orientada a Objetos?
+
+Paradigma Orientado a Objetos
+
+Lenguajes Orientados a Objetos
+
+Instalando Visual Studio Code
+
+Diagramas de Modelado
+
+Qué es UML
+
+Orientación a Objetos
+Objetos
+
+Abstracción y Clases
+
+Modularidad
+
+Analizando Uber en Objetos
+
+Reto 1: identificando objetos
+
+Programación Orientada a Objetos. Análisis
+Clases en UML y su sintaxis en código
+
+Modelando nuestros objetos Uber
+
+¿Qué es la herencia?
+
+Aplicando Herencia a nuestro proyecto Uber
+
+Reto 2: analicemos un problema
+
+Clases, Objetos y Método Constructor
+
+Creando nuestras carpetas iniciales para el curso
+
+Definiendo clases en Java y Python
+
+Definiendo Clases en JavaScript
+
+Objetos, método constructor y su sintaxis en código
+
+Objetos. Dando vida a nuestras clases en Java y Python
+
+Declarando un Método Constructor en Java y JavaScript
+
+JavaScript orientado a objetos, lo más nuevo
+
+Declarando un método constructor en Python
+
+
+Herencia
+Aplicando herencia en lenguaje Java y PHP
+
+Solución del reto de herencia en PHP
+
+Aplicando herencia en lenguaje Python y JavaScript
+
+Otros tipos de Herencia
+
+Reto 4
+
+Encapsulamiento
+
+Encapsulamiento
+
+Encapsulando atributos en Java
+
+Polimorfismo
+Generando polimorfismo en Java
+
+Generando polimorfismo en PHP
+
+Cierre del curso
+El Diagrama UML de Uber
+
+Conclusiones
+
+Bonus: Qué es la Programación Orientada a Objetos
