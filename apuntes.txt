@@ -81,6 +81,84 @@ Python - .py
 
 ***Clase 5 Instalando Visual Studio Code***
 
+Pues que comience la aventura y digo aventura porque te darás cuenta de lo emocionante que será poder trabajar 4 lenguajes de programación en un solo entorno de desarrollo y sí, precisamente eso es lo que nos resuelve Visual Studio Code el cual será nuestro campeón en este curso.
+
+Visual Studio Code lo puedes encontrar en las tres versiones básicas de Sistema Operativo (Windows, Mac y Linux) y lo puedes descargar directo en este enlace: https://code.visualstudio.com/download. Es muy ligero y basta con un Siguiente, siguiente, siguiente para instalar.
+
+1.png
+Cuando la instalación haya finalizado verás algo como esto:
+
+2.png
+¡Súper! Todo salió bien. Ahora pasemos a configurarlo para cada lenguaje.
+
+Primero ubica la sección de Extensiones o en inglés Extensions, además de la barra de Search porque estaremos buscando la extensión para cada lenguaje.
+
+3.png
+Java
+En la barra de Search Extensions escribe: Java Extension Pack y da clic en el botón verde Install.
+
+4.png
+Ahora, para tener una mejor experiencia en Debugging, instala el Debugger for Java, el cual encuentras siguiendo el procedimiento anterior.
+
+5.png
+Listo, terminamos con Java. Aprende más en este enlace: https://code.visualstudio.com/docs/languages/java
+
+Ahora vamos por Python.
+
+Python
+Comencemos instalando Python en nuestra computadora. Dirígete al sitio python.org y dale clic en el botón de Descargar.
+
+6.png
+Ve de la mano con el asistente hasta finalizar la instalación:
+
+7.png
+Terminaremos la configuración de Python en Visual Studio Code más adelante. Aprende más aquí.
+
+Mientras tanto sigamos con PHP.
+
+PHP
+Primero necesitamos instalar el intérprete de PHP, la forma más fácil es descargando XAMPP:
+
+Descarga XAMPP
+
+Puedes descargarlo tanto para Linux, Windows o macOS.
+
+XAMPP.png
+Una vez descargado simplemente debes abrirlo e instalarlo dando click al botón de “Next” como cualquier programa normal. Si te sale una ventana de permisos de Firewall simplemente permite ambas opciones:
+
+Captura de pantalla de 2021-09-10 10-33-21.png
+Con el intérprete instalado, para configurar PHP buscaremos la extensión PHP Server y pulsamos “Instalar”
+
+8.png
+Ahora debemos asegurarnos de que PHP y la extensión estén conectados. Para ello, en Visual Studio Code nos vamos a settings:
+
+settings.png
+Y aquí buscamos “PHP Server”, nos debería aparecer algo como esto:
+
+php path.png
+En el apartado Phpserver: PHP Config Path debe decir: C:\xampp\php\php.ini.
+En el apartado Phpserver: PHP Path debe decir: C:\xampp\php\php.exe.
+❗ Estas rutas pueden variar si durante la instalación de XAMPP cambiaste el directorio de instalación, o si tu Windows está instalado en otro disco que no sea el disco C:.
+
+¡Con esto ya tienes PHP instalado!. Puedes aprender más en la ruta de Desarrollo Web Backend con PHP
+
+JavaScript
+En este caso no necesitamos instalar absolutamente nada, utilizaremos el editor con su configuración por defecto.
+
+Comencemos nuestro proyecto
+Ya está todo listo, ahora dejemos creado el proyecto.
+
+Para esto seleccionaremos la opción Add workspace folder
+
+9.png
+A continuación creamos una carpeta llamada CursoPOOUber y damos clic en Add para finalizar. Ahora generemos esta estructura de carpetas para manejar los documentos correspondientes al lenguaje de programación:
+
+10.png
+Ahora que tenemos listo nuestro sistema de archivos terminemos la configuración de Python en VSC, vamos al menú View -> Command Palette y escribimos python “Seleccionar intérprete”, tal como se muestra en la figura.
+
+11.png
+¡Ya terminamos, estamos listos!
+
 ***Clase 6 Diagramas de Modelado***
 
 ***Clase 7 Qué es UML***
