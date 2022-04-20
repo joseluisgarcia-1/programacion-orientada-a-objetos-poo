@@ -45,12 +45,14 @@ esto surge a partir de los problemas que necesitamos plasmar en código.
 
 Es analizar un problema en forma de objetos para después llevarlo a código, eso es la Orientación a Objetos.
 
-Un paradigma es una teoría que suministra la base y modelo para resolver problemas. La paradigma de Programación Orientada a Objetos se compone de 4 elementos:
+Un paradigma es una teoría que suministra la base y modelo para resolver problemas. El paradigma de Programación Orientada a Objetos se compone de 4 elementos:
 
-Clases
-Propiedades
-Métodos
-Objetos
+- Clases
+- Propiedades
+- Métodos
+y estos tres juntos se convierten o transforman en un objeto
+- Objetos
+
 Y 4 Pilares:
 
 Encapsulamiento
@@ -59,6 +61,23 @@ Herencia
 Polimorfismo
 
 ***Clase 4 Lenguajes Orientados a Objetos***
+
+Java - .java
+    - Orientado a objetos naturalmente
+    - Android
+    - Server side
+PHP - .php
+    - Lenguaje interpretado
+    - Pensado para la web
+    - Navegador va interpretando sin máquina
+JavaScript - .js
+    - Lenguaje interpretado
+    - Orientado a objetos pero basado en prototipos
+    - Pensado para la web
+Python - .py
+    - Diseñado para ser fácil de usar
+    - Múltiples usos:
+        - Web, server, Side, Análisis de datos, Machine learning
 
 ***Clase 5 Instalando Visual Studio Code***
 
