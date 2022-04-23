@@ -163,7 +163,6 @@ Ahora que tenemos listo nuestro sistema de archivos terminemos la configuración
 
 Modelado de un problema en específico
 
-
 - OMT
     - Object modeling techniques
         - Este fue creado en 1991 pero ya está obsoleto, fue reemplazado por UML
@@ -234,22 +233,220 @@ Con esto terminamos nuestro primer módulo. Vamos al siguiente para entender có
 
 ***Clase 8 Objetos***
 
+Cuando tengamos un problema lo primero que debemos hacer es identificar el objeto
+
+Los Objetos son aquellos que tienen propiedades y comportamientos, también serán sustantivos.
+
+Pueden ser Físicos o Conceptuales
+Las Propiedades también pueden llamarse atributos y estos también serán sustantivos. Algunos atributos o propiedades son nombre, tamaño, forma, estado, etc. 
+Son todas las características del objeto.
+
+Los Comportamientos serán todas las operaciones que el objeto puede hacer, suelen ser verbos o sustantivos y verbo.
+Algunos ejemplos pueden ser que el usuario pueda hacer login y logout.
+Un **Comportamiento **o método: Son las acciones u operaciones que puede realizar un objeto, es decir lo que puede hacer dicho objeto.
+
+Objeto Perro:
+atributos: nombre, color, raza, altura
+comportamientos: ladrar, correr, dormir, comer
+
 ***Clase 9 Abstracción y Clases***
+
+Una Clase es el modelo por el cual nuestros objetos se van a construir y nos van a permitir generar más objetos.
+
+Analizamos Objetos para crear Clases. Las Clases son los modelos sobres los cuales construiremos nuestros objetos.
+
+Abstracción es cuando separamos los datos de un objeto para generar un molde.
 
 ***Clase 10 Modularidad***
 
+La modularidad va de la mano con el Diseño Modular, este consiste en dividir nuestro sistema en partes pequeñas que funcionen de manera independiente.
+
+Modular: Dividir un sitema y así crear módulos independientes, lo que permite evitar un colapso masivo en nuestro código y mejorar la legibilidad.
+La modularidad va muy relacionada con las clases y es un principio de la Programación Orientado a Objetos y va de la mano con el Diseño Modular que significa dividir un 
+sistema en partes pequeñas y estas serán nuestros módulos pudiendo funcionar de manera independiente.
+
+La modularidad de nuestro código nos va a permitir
+
+Reutilizar
+Evitar colapsos
+Hacer nuestro código más mantenible
+Legibilidad
+Resolución rápida de problemas
+Una buena práctica es separando las clases en archivos diferentes.
+
+
+La clase:
+
+- Modularidad
+- Divide el programa en diferentes partes o módulos/clases
+- Separar las clases en archivos
 ***Clase 11 Analizando Uber en Objetos***
 
-***Clase 12 Reto 1: identificando objetos***
+se crea una carpeta en el proyecto inicial
 
+identificados en uber
+User: El usuario, persona, cliente.
+
+Car: UberX, UberPool, UberBlack, UberVan.
+
+Route: Ruta de un punto A al B, tu ruta de traslado.
+
+Driver: Conductor del auto, del objeto car.
+
+Payment: Card, Paypal, Cash, método de pago por el servicio.
+
+Trip: Viaje realizado del punto A al B.
+***Clase 12 Reto 1: identificando objetos***
+Ya estás listo para resolver tu primer reto y poner en práctica todo lo que aprendiste para identificar objetos en un problema.
+
+Toma como referencia nuestro Sistema de Adopciones e identifica todos los objetos.
+
+0.png
+Compártenos tu análisis en la sección de discusiones.
 - Módulo Programación Orientada a Objetos. Análisis
 ***Clase 13 Clases en UML y su sintaxis en código***
+- Nombre clase -> Identidad
+- atributos -> Estado
+- operaciones o métodos -> Comportamientos
+- Java:
+    - class Person{}
+        Ejemplo:
+            class Person{
+                String name = "";
+                void walk(){}
+            }
+- Python:
+    - class Person:
+        Ejemplo:
+            class Person:
+                name = ""
+                def walk():
+- JavaScript:
+    - function Person(){}
+        Ejemplo:
+            Person.prototype.walk = function(){
+            }
+- PHP:
+    - class Person{}
+        Ejemplo:
+            class Person{
+                $name = "";
+                function walk(){}
+            }
 
 ***Clase 14 Modelando nuestros objetos Uber***
 
+class User:
+    id
+    name
+    document
+    email
+    password
+
+class Driver:
+    id
+    name
+    document
+    email
+    password
+
+class Route:
+    id
+    start[]
+    end[]
+
+class Uberx:
+    id
+    license
+    driver
+    passengers
+    brand
+    model
+
+class UberPool:
+    id
+    license
+    driver
+    passengers
+    brand
+    model
+
+class UberBlack:
+    id
+    license
+    driver
+    passengers
+    type_car_accepted[]
+    seats_material[]
+
+class UberVan:
+    id
+    license
+    driver
+    passengers
+    type_car_accepted[]
+    seats_material[]
+
+class Card:
+    id
+    number
+    code_card
+    date
+
+class Paypal:
+    id
+    email
+
+class Cash:
+    id
+
+para hacer el uml Igual si eres estudiante puedes usar Lucidchart completo de forma gratuita registrandote con tu correo .edu
+
 ***Clase 15 ¿Qué es la herencia?***
 
+Don’t repeat yourself es una filosofía que promueve la reducción de duplicación en programación, esto nos va a inculcar que no tengamos líneas de código duplicadas.
+
+Toda pieza de información nunca debería ser duplicada debido a que incrementa la dificultad en los cambios y evolución
+
+La herencia nos permite crear nuevas clases a partir de otras, se basa en modelos y conceptos de la vida real. También tenemos una jerarquía de padre e hijo.
+
+He escuchado que hay programadores que no aconsejan en el trabajo usar los términos Padre e hijos ya que al llamarlos así se puede dar una mala impresión en cuanto al 
+nivel profesional y de conocimiento. En un escenario laboral es mejor llamar estas relaciones con los nombres Súperclase y Subclase y solo usar Padre e hijos 
+para enseñar y entender la idea de herencia (como el caso de este curso) y entre compañeros de confianza.
+
+- DRY: Don't repeat yourself: No te repitas
+    - Promueve la reducción de duplicación en programación
+    - Toda pieza de información nunca debería ser duplicada debido a que la duplicación incrementa la dificultad en cambios y evolución
+    
+La Reutilización es uno de los principios de la POO
+
 ***Clase 16 Aplicando Herencia a nuestro proyecto Uber***
+
+- De las clases anteriores uniremos las siguientes: user y driver, ya que estas dos clases contienen los mismos atributos y entonces quedaría así
+
+Esta sería una Súperclase
+class Account: 
+    id
+    name
+    document
+    email
+    password
+y las clases user y driver vendrían siendo las subclases
+
+- y ahora uniremos para pagos las clases Card, PayPal, Cash, entonces la súper clase sería Payments y las subclases serían Card, PayPal, Cash, por lo tanto quedaría así:
+
+class Payments:
+    id
+
+subclases Card, PayPal, Cash
+
+- ahora para que la clase Car sea la súperclase uniremos las clases Uberx, UberBlack, UberPool, UberVan, porque tienen muchos atributos en común entonces quedaría así:
+
+Class Car:
+    id
+    license
+    driver
+    passengers
 
 ***Clase 17 Reto 2: analicemos un problema***
 
