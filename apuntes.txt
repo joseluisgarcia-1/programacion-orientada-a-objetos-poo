@@ -446,9 +446,17 @@ Class Car:
     id
     license
     driver
-    passengers
+    passengers 
 
 ***Clase 17 Reto 2: analicemos un problema***
+
+Imagina que nuestro sistema de adopciones creció y ahora ofrece adoptar pericos, loros, gatos y hamsters.
+
+Genera un nuevo análisis, aplica herencia para abstraer mejor el problema y lograr modularidad en el software.
+
+Comparte tus resultados en la sección de discusiones.
+
+Hay una imagen que nombraré reto2 y ahí está cómo se podría hacerlo
 
 - Módulo Clases, Objetos y Método Constructor
 
