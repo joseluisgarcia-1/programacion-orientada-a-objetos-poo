@@ -462,13 +462,167 @@ Hay una imagen que nombraré reto2 y ahí está cómo se podría hacerlo
 
 ***Clase 18 Creando nuestras carpetas iniciales para el curso***
 
+¡Hola! Ahora sí vamos a empezar a definir nuestras clases en 4 diferentes lenguajes de programación, pero antes de ello vamos primero a crear la estructura de nuestras 
+carpetas.
+
+La estructura de carpetas que estaremos manejando durante el curso será la siguiente:
+
+CursoPOOUber
+├── Java
+├── JS
+├── PHP
+└── Python
+Básicamente nuestra carpeta raíz será la carpeta CursoPOOUber y dentro crearemos las carpetas Java, JS, PHP y Python en las cuales iremos guardando nuestros archivos a
+medida que avanzamos en el curso.
+
+Configurando el workspace para Python
+En una clase anterior instalamos Python, sin embargo, como estaremos guardando todo el código de este lenguaje dentro de la carpeta Python debemos informarle a 
+Visual Studio Code que el código va a estar ahí, de esta forma podemos evitar problemas a futuro cuando usemos módulos.
+
+Para hacer esto es muy sencillo, dentro de nuestra carpeta CursoPOOUber vamos a crear una nueva carpeta llamada .vscode (ojo, el punto al inicio del nombre es importante).
+Dentro de esta carpeta vamos a crear un nuevo archivo llamado settings.json y dentro de este archivo vamos a poner la siguiente información:
+
+{
+    "python.autoComplete.extraPaths": ["./Python"],
+}
+De esta forma le estamos diciendo a nuestro editor de código que todos nuestros archivos de Python van a estar dentro de la carpeta Python, por tanto, él sabrá que 
+cualquier módulo deberá leerlo desde esa carpeta, y no desde la carpeta raíz, lo cual evitará que te marque errores en el futuro 😄.
+
+Es importante que cuando abras tu proyecto en Visual Studio Code, lo abras desde la carpeta CursoPOOUber, de esta forma, el editor de código te mostrará en el árbol de 
+carpetas a tus 5 carpetas que has creado:
+
+folder_structure.png
+¡Estamos listos para empezar a codear! Nos vemos en las siguiente clase donde empezaremos a definir clases con Java y Python.
+
 ***Clase 19 Definiendo clases en Java y Python***
+
+Se definieron las clases dentro de cada carpeta
 
 ***Clase 20 Definiendo Clases en JavaScript***
 
+Si estás interesado en aprender JavaScript desde ahora debes saber que el concepto de clases no existía como tal hasta el nuevo estándar EcmaScript 6. 
+El reto de encontrar sistemas construidos con este estándar es alto por esa razón te explicaré cuál fue por mucho tiempo su equivalente.
+
+Los Prototipos fue la forma de crear clases en JavaScript y las representaremos partiendo de la declaración de una función.
+
+Creemos nuestras clases:
+
+Account
+Car
+Payment
+Route
+Para esto crearemos el siguiente sistema de archivos dentro de la carpeta JS de nuestro proyecto:
+
+Account.js
+Car.js
+Payment.js
+Route.js
+index.js
+El archivo index.js será el lugar equivalente al punto de entrada de la aplicación donde estaremos declarando nuestros objetos basado en las clases. 
+Para esta clase lo dejaremos en blanco.
+
+Ahora veamos el código archivo por archivo:
+
+Account.js
+Captura de pantalla 2019-01-13 a la(s) 2.56.24.png
+Car.js
+Captura de pantalla 2019-01-13 a la(s) 2.56.34.png
+Payment.js
+Captura de pantalla 2019-01-13 a la(s) 2.56.41.png
+Route.js
+Captura de pantalla 2019-01-13 a la(s) 2.56.56.png
+Este es el enlace del código del proyecto: https://github.com/anncode1/Curso-POO-Platzi/tree/f5725787165b36cae579f94e428068039b554b0b/JS
+
+En este código notarás el uso de la palabra reservada this. Normalmente cuando usamos la sintaxis punto siempre lo haremos a partir de un objeto instanciado, 
+en este caso con this, se hace una simulación al objeto en cuestión, a pesar de que en ese momento visualmente sigue siendo una clase.
+
+Captura de pantalla 2019-01-13 a la(s) 2.56.56.png
+Digamos que se adelanta un poco al momento de ejecución y visualiza al objeto con sus atributos, más adelante verás la forma en que podemos asignar datos 
+a un atributo del objeto en otros lenguajes y verás que es exactamente la misma sintaxis.
+
+Si intentaramos poner this. en el momento de ejecución nos traería un listado de todos los componentes de la clase que en este caso son solo estos tres: id, init y end.
+
+This hace referencia al objeto instanciado. Para comprender del todo esta última frase mira la siguiente clase donde hablamos de objetos.
+
+Reto.
+En la carpeta de nuestro proyecto PHP declara estas mismas clases: Puedes utilizar esta clase de apoyo: https://platzi.com/clases/1338-php/12929-programacion-orientada-a-objetos1172/
+Inténtalo y compártenos tus resultados, compáralos con tus compañeros.
+
 ***Clase 21 Objetos, método constructor y su sintaxis en código***
 
+Un objeto es una instancia de una clase, es decir, el objeto es el resultado de lo que se modeló, de los parámetros que dejamos ahí declarados entonces
+usaremos los objetos para que estas clases tomen vida
+
+Los objetos nos ayudan a crear instancia de una clase, el objeto es el resultado de lo que modelamos, de los parámetros declarados y usaremos los objetos para que nuestras
+clases cobren vida.
+
+Los métodos constructores dan un estado inicial al objeto y podemos añadirle algunos datos al objeto mediante estos métodos. Los atributos o elementos que pasemos
+a través del constructor serán los datos mínimos que necesita el objeto para que pueda vivir.
+
+creación de un objeto, ó cómo instanciarlo
+- Java:
+    - Ejemplo:
+        - Person person = new Person();
+- Python:
+    Ejemplo:
+        - persona = Person()
+
+- JavaScript:
+    Ejemplo:
+        var person = new Person();
+
+- PHP:
+    - Ejemplo:
+        $person = new Person();
+
+- Método constructor:
+    - Dar un estado inicial al objeto
+    - Tiene el mismo nombre de la clase
+    - Son los parámetros mínimos que necesita el objeto para que pueda vivir
+
+    - Java:
+        - Ejemplo:
+            public Person(String name){
+                this.name = name;
+            }
+    - Python:
+        Ejemplo:
+            def __init__(self, name):
+                self.name = name
+
+    - JavaScript:
+        Ejemplo:
+            function Person(name){
+                this.name = name
+            }
+
+    - PHP:
+        - Ejemplo:
+            public function_construct($name){
+                $this->name=name;
+            }
+- Cómo pasarle los datos a un objeto
+
+- Java:
+    - Ejemplo:
+        Person person = new
+        Person("Messi");
+- Python:
+    Ejemplo:
+        person = Person("Messi")
+
+- JavaScript:
+    - Ejemplo:
+        var person = new
+        Person("Messi");
+
+- PHP:
+    - Ejemplo:
+        $person = new Person("Messi")
+
 ***Clase 22 Objetos. Dando vida a nuestras clases en Java y Python***
+
+
 
 ***Clase 23 Declarando un Método Constructor en Java y JavaScript***
 
