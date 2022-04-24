@@ -622,15 +622,50 @@ creación de un objeto, ó cómo instanciarlo
 
 ***Clase 22 Objetos. Dando vida a nuestras clases en Java y Python***
 
+Pasándole datos a una instancia, en java se hace así:
 class Main {
 
     public static void main(String[] args) {
-        System.out.printIn("Hola Mundo");
-        Car car = 
+        System.out.println("Hola Mundo");
+        Car car = new Car();
+        car.license = "YVJ03D";
+        car.driver = "Lionel Messi";
+        car.passegenger = 4;
+        car.printDataCar();
+
+        Car car2 = new Car();
+        car2.license = "XDE09D";
+        car2.driver = "CR";
+        car2.passegenger = 3;
+        car.printDataCar();
     }
 }
 
+Pasándole datos a una instancia, en python se hace así:
+
+from car import Car
+if __name__ == '__main__':
+    print("Hola mundo")
+    car = Car()
+    car.license = "XAED09D"
+    car.driver = "Lionel Messi"
+    #con este print de abajo me trae los datos dentro de un diccionario
+    print(vars(car))
+
+    #Nueva instancia de la clase Car
+
+    car_two = Car()
+    car_two.license = "YVJ03D"
+    car_two.driver = "CR7"
+    #Con los print de abajo me trae los datos normal, es decir, en string
+    print(car_two.license)
+    print(car_two.driver)
+    #Con el print de abajo puedo decirle que me imprima todas las variables de la instancia y los trae en un diccionario
+    #print(vars(car_two))
+
 ***Clase 23 Declarando un Método Constructor en Java y JavaScript***
+
+
 
 ***Clase 24 JavaScript orientado a objetos, lo más nuevo***
 
