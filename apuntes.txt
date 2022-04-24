@@ -622,7 +622,13 @@ creación de un objeto, ó cómo instanciarlo
 
 ***Clase 22 Objetos. Dando vida a nuestras clases en Java y Python***
 
+class Main {
 
+    public static void main(String[] args) {
+        System.out.printIn("Hola Mundo");
+        Car car = 
+    }
+}
 
 ***Clase 23 Declarando un Método Constructor en Java y JavaScript***
 
