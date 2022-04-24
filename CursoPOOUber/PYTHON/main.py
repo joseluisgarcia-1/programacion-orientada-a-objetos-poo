@@ -4,6 +4,7 @@ if __name__ == '__main__':
     car = Car()
     car.license = "XAED09D"
     car.driver = "Lionel Messi"
+    #con este print de abajo me trae los datos dentro de un diccionario
     print(vars(car))
 
     #Nueva instancia de la clase Car
@@ -11,4 +12,8 @@ if __name__ == '__main__':
     car_two = Car()
     car_two.license = "YVJ03D"
     car_two.driver = "CR7"
-    print(vars(car_two))
+    #Con los print de abajo me trae los datos normal, es decir, en string
+    print(car_two.license)
+    print(car_two.driver)
+    #Con el print de abajo puedo decirle que me imprima todas las variables de la instancia y los trae en un diccionario
+    #print(vars(car_two))
