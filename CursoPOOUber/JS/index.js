@@ -7,6 +7,7 @@ car.printDataCar();
 var car = new Car("AWD345", new Account("Lionel Messi", "QWE234"))
 car.passenger = 4;
 car.printDataCar();
-
 */
-
+var uberX = new UberX("AW456", new Account("Erling Haaland", "Borussia"), "Nissan", "Versa")
+uberX.passenger = 3;
+uberX.printDataCar();
