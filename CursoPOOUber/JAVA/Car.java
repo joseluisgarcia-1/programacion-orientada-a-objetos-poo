@@ -4,10 +4,10 @@ por ejemplo en la línea 20 lo estoy imprimiendo y si lo puedo ver en consola
 */
 
 class Car {
-    Integer id;
+    private Integer id;
     private Integer passegenger;
-    String license;
-    Account driver;
+    private String license;
+    private Account driver;
     /*String driver;*/
     /* metodo constructor de java, Car es el nombre de la clase, dentro de los parentesis van los parametros y además de esto, el tipo de parametro o dato
     ejemplo: String license, 
@@ -41,5 +41,5 @@ class Car {
         }
         
     }
-
+    
 }

@@ -863,10 +863,16 @@ modificadores de acceso:
 
 ***Clase 32 Encapsulando atributos en Java***
 
-
+Ver los archivos de main.java y car.java
 
 - Módulo Polimorfismo
 ***Clase 33 Generando polimorfismo en Java***
+
+Es tener un método que se comparte con muchas clases pero cada clase le da utilidad como a ella le convenga o mejor le parezca, en otras palabras de acuerdo a su necesidad
+
+Polimorfismo: Muchas formas. Poli = muchas, morfismo = formas. NO es Poliformismo
+
+Es construir métodos con el mismo nombre pero con comportamiento diferente
 
 ***Clase 34 Generando polimorfismo en PHP***
 
