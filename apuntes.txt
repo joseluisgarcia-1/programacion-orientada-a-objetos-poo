@@ -665,14 +665,122 @@ if __name__ == '__main__':
 
 ***Clase 23 Declarando un Método Constructor en Java y JavaScript***
 
-
+si en visual Studio code le doy: html:5, me coloca algo como esto
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 
 ***Clase 24 JavaScript orientado a objetos, lo más nuevo***
 
+A partir de las nuevas especificaciones del EcmaScript 6 ya podemos declarar una clase con la palabra reservada class, aunque es importante aclarar que estos no dejan de ser prototipos, sino todo lo contrario.
+
+Además tendremos una palabra clave para definir un constructor, y dentro de este estarán las propiedades de nuestra clase definidas listas para inicializarse.
+
+Transcribamos el código JavaScript que generamos en la clase anterior a este nuevo estándar.
+
+La clase Car quedaría así:
+
+1.png
+Si quisiéramos declarar un método, en esta nueva sintaxis dejaremos de utilizar la palabra clave function.
+
+Ahora veamos a la clase Account:
+
+2.png
+Y para finalizar aquí puedes ver las clases Route y Payment:
+
+3.png
+4.png
+Notarás que para instanciar un objeto seguiremos usando la palabra clave new.
+
+5.png
+Y los resultados serán los mismos:
+
+6.png
+Aquí encuentras el código de este ejercicio: https://github.com/anncode1/Curso-POO-Platzi/tree/3.1.POOJS
+
 ***Clase 25 Declarando un método constructor en Python***
+
+En Python encontrarás un concepto denominado Métodos Mágicos, estos métodos son llamados automática y estrictamente bajo ciertas reglas. El método constructor en Python forma parte de esta familia de métodos y como aprendimos en la clase anterior lo declaramos usando __init__, aunque si nos ponemos estrictos este método no construye el objeto en sí. El encargado de hacer esto es __new__ y el método __init__ se encargará de personalizar la instanciación de la clase, esto significa que lo que esté dentro de __init__ será lo primero que se ejecute cuando se cree un objeto de esta clase.
+
+Para nuestro proyecto tenemos la necesidad de que algunas variables se inicialicen obligatoriamente cuando ocurra la instanciación. Así que declaremos el método __init__ en las clases de nuestro proyecto con las propiedades obligatorias.
+
+Para la clase Account quedaría algo así, notarás que usamos la palabra clave self, esta es muy parecida a lo que venimos trabajando a otros lenguajes con this. Y como su nombre lo dice hace referencia a los datos que componen la clase, en este caso self.name está llamando al atributo name que se encuentra en la línea 3 de la clase y, le está asignando el dato que se pasa en el método __init__ de la línea 8.
+
+class Account:
+    id = int()
+    name = str()
+    document = str()
+    email = str()
+    password = str()
+
+    def __init__(self, name, document):
+        self.name = name
+        self.document = document
+
+Ahora veamos la clase Car:
+
+imagen.png
+class Car:
+    id = int()
+    license = str()
+    driver = Account("","")
+    passegenger = int()
+
+    def __init__(self,license, driver):
+        self.license = license
+        self.driver = driver
+
+Lo que notarás de diferente es que cambiamos el tipo de dato de driver, ahora es de tipo Account y como ves está solicitando los dos datos obligatorios para instanciar un objeto de este tipo. Esto lo verás más en acción en el próximo fragmento de código del archivo main.py. Además, mucho ojo, en la primera línea observamos que es importante importar la clase para poderla usar.
+
+Nuestro archivo main.py ahora se verá así:
+
+Captura de pantalla 2019-01-21 a la(s) 1.17.11.png
+    
+    car_three = Car("AMS234", Account("Kilyan Mbappe", "7Francés"))
+    print(vars(car_three))
+    print(vars(car_three.driver))
+
+Observa que estamos importando las dos clases que usaremos y las estamos instanciando en los métodos constructores.
+
+Los resultados serán los siguientes:
+
+Captura de pantalla 2019-01-21 a la(s) 1.14.06.png
+El código de este ejemplo lo encuentras en este enlace:
+https://github.com/anncode1/Curso-POO-Platzi/tree/3.2.ConstructorPython
+
+Reto 3.
+Ahora que ya viste cómo creamos un método constructor en Python, mira esta clase https://platzi.com/clases/2034-php-poo/32133-polimorfismo/ y hazlo también para PHP. Compártenos tus resultados en la sección de discusiones.
 
 - Módulo Herencia
 ***Clase 26 Aplicando herencia en lenguaje Java y PHP***
+
+- Java:
+    - La cuestión de herencia será definida a partir de la palabra clave o reservada extends
+        - Ejemplo:
+            class Student extends Person
+- PHP:
+    - Es exactamente igual que en Java
+        - Ejemplo:
+            class Student extends Person
+-JavaScript:
+    - Toma la clase hija, el prototipo y de inmediato la instancía como una clase padre
+        - Ejemplo:
+            studen.prototype = new Person();
+- Python:
+    - Recibe como parámetro o un parámetro dentro de la clase, por ejemplo en el siguiente caso la clase Student recibe la clase Person
+        - Ejemplo:
+            class Student(Person):
+
+
 
 ***Clase 27 Solución del reto de herencia en PHP***
 

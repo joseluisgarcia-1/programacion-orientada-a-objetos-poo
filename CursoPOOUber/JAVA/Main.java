@@ -2,15 +2,11 @@ class Main {
 
     public static void main(String[] args) {
         System.out.println("Hola Mundo");
-        Car car = new Car();
-        car.license = "YVJ03D";
-        car.driver = "Lionel Messi";
+        Car car = new Car("YVJ03D", new Account("Lionel Messi", "AND12"));
         car.passegenger = 4;
         car.printDataCar();
-
-        Car car2 = new Car();
-        car2.license = "XDE09D";
-        car2.driver = "CR";
+        /* instanciando un nuevo objeto*/
+        Car car2 = new Car("XDE09D", new Account("CR","ANDA866"));
         car2.passegenger = 3;
         car.printDataCar();
     }
