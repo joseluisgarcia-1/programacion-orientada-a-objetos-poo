@@ -876,9 +876,148 @@ Es construir métodos con el mismo nombre pero con comportamiento diferente
 
 ***Clase 34 Generando polimorfismo en PHP***
 
+Ahora que ya entiendes cómo funciona el polimorfismo y lo aplicaste a Java veamos cómo hacer el mismo ejemplo en PHP.
+
+Aplicar polimorfismo en PHP es relativamente más sencillo, pues este es un lenguaje con un tipado más flexible (que no requiere que especifiques qué tipo de dato usar) y su sintaxis es muy sencilla.
+
+Hasta ahora esto es lo que tenemos en nuestro archivo car.php:
+
+
+require_once('account.php');
+class Car {
+
+    public $id;
+    public $license;
+    public $driver;
+    protected $passenger; // Es importante que esta propiedad esté marcada como protected
+
+    public function __construct($license, $driver){
+        $this->license = $license;
+        $this->driver = $driver;
+    }
+
+    public function printDataCar() {
+        echo "Licencia: $this->license Driver: ".$this->driver->name;
+    }
+    
+}
+?>
+Aún nos falta añadir nuestros getters y setters, en PHP es sencillo, simplemente tenemos que escribir dos funciones, una que nos devuelva nuestro número de pasajeros, y otra que nos permita establecer cierto número de pasajeros.
+
+La función getter es la más sencilla de todas, pues simplemente hay que retornar el valor de la propiedad passenger:
+
+public function getPassenger() {
+    return $this->passenger;
+}
+Recuerda que para hacer nuestra función setter necesitamos hacer una validación. Uber únicamente nos permite tener 4 pasajeros (comportamiento que modificaremos más adelante con polimorfismo), por lo que nuestra función setter quedaría así:
+
+public function setPassenger($passenger) {
+        
+    if ($passenger == 4) {
+        $this->passenger = $passenger;
+    }
+    else {
+        echo "Necesitas asignar 4 pasajeros";
+    }
+
+}
+¡Genial!, ahora ya estamos listos para empezar a trabajar, recuerda que ya deberías tener tu clase UberVan creada hasta este punto 😉.
+
+Antes de comenzar a aplicar polimorfismo veamos qué sucede si intento generar una instancia de 6 pasajeros con mi clase UberVan, recuerda que para hacer estas pruebas estamos trabajando sobre nuestro archivo index.php (no olvides hacer el require hacia el archivo uberVan.php 👀):
+
+$uberVan = new UberVan("OJL395", new Account("Raúl Ramírez", "AND456"), "Nissan", "Versa");
+$uberVan->setPassenger(6);
+$uberVan->printDataCar();
+Cuando trato de ejecutar este código, esto es lo que me imprime en mi navegador:
+
+php-poo.png
+Me dice que solo puedo asignar 4 pasajeros, ¡pero para Uber Van deben ser 6 pasajeros! Es hora de usar el polimorfismo.
+
+Aplicando polimorfismo
+Para permitir que la clase UberVan acepte 6 pasajeros sin afectar a las otras clases de Uber, necesitamos sobreescribir el método setPassenger, pero permitiendo que esta vez acepte 6 pasajeros.
+
+Recuerda que cuando aplicamos herencia, todos los métodos de la clase Car fueron pasados a la clase UberVan, por tanto, esta clase también tiene acceso al método setPassenger, pero este método solo permite 4 pasajeros. Para aplicar polimorfismo, podemos sobreescribir dicho método dentro de nuestra clase UberVan alojada en el archivo uberVan.php, ¡pero ahora permitiendo 6 pasajeros!
+
+public function setPassenger($passenger) {
+    
+    if ($passenger == 6) {
+        $this->passenger = $passenger;
+    }
+    else {
+        echo "Necesitas asignar 6 pasajeros 
+";
+    }
+
+}
+Si lo deseas, también puedes añadir la propiedad $passenger a la clase UberVan (aunque en PHP no es necesario):
+
+protected $passenger;
+Para hacerlo más interesante, vamos a cambiar el código de nuestro método printDataCar de la clase Car ubicada en car.php por el siguiente:
+
+public function printDataCar() {
+    echo "
+        Licencia: $this->license 
+        Driver: {$this->driver->name} 
+        Número de pasajeros: $this->passenger
+        
+
+    ";
+}
+El código es el mismo, pero lo hicimos más legible, agregamos la información del número de pasajeros y agregamos un salto de línea al final.
+
+¡Ahora pongamos a prueba nuestra clase polimórfica! Vayamos a nuestro index.php, aquí ya teníamos escrito el código para instanciar nuestra clase UberVan con 6 pasajeros, pero agreguemos el código para instanciar una clase de 4 pasajeros:
+
+$uberX = new UberX("CVB123", new Account("Andres Herrera", "AND456"), "Chevrolet", "Spark");
+$uberX->setPassenger(4);
+$uberX->printDataCar();
+¡Vualá!, ahora vemos que nuestra clase UberVan nos permite añadir 6 pasajeros, mientras que el resto de clases nos permite seguir añadiendo 4 pasajeros, ¡hemos creado una clase polimórfica!
+
+poo-poli.png
+Reto
+Ahora que ya sabes cómo trabajar con polimorfismo en PHP, te reto a que apliques el polimorfismo al método printDataCar de la clase Car en la clase UberX de tal forma que al llamarlo desde una instancia de UberX este también imprima la marca y el modelo.
+
+Una vez que hayas completado el reto puedes dejar tu solución en los aportes de la clase y compararlo con la solución de otros estudiantes. ¡Nos vemos en la siguiente clase para dar un repaso al diagrama UML de Uber que obtuvimos al final!
+
 - Módulo Cierre del curso
 ***Clase 35 El Diagrama UML de Uber***
+
+Este es el diagrama que finalmente obtuvimos, aquí solo faltaría añadirle los atributos que posee cada clase.
+
+Captura de pantalla 2019-01-21 a la(s) 3.20.10.png
+Recopilemos todo lo que hemos aprendido para explicar los últimos detalles.
+
+En primer lugar notarás que tenemos 3 tipos de flechas:
+
+Asociación
+associacion.png
+Como su nombre lo dice, notarás que cada vez que esté referenciada este tipo de flecha significará que ese elemento contiene al otro en su definición. Si recuerdas la clase Car, este contenía una instancia de Driver. La flecha apuntará hacia la dependencia.
+
+car-driver.png
+Herencia
+herencia.png
+Siempre que veamos este tipo de flecha se estará expresando la herencia.
+En nuestro diagrama tuvimos al menos tres familias conviviendo. La dirección de la flecha irá desde el hijo hasta el padre.
+
+Familia Car
+
+Captura de pantalla 2019-01-24 a la(s) 1.24.30.png
+Familia Account
+Captura de pantalla 2019-01-24 a la(s) 1.24.13.png
+
+Familia Payment
+Captura de pantalla 2019-01-24 a la(s) 1.24.42.png
+
+Composición
+composicion.png
+Pasemos a una de nuestras piezas claves, pues notarás en el centro del diagrama la clase Trip que está vinculada a User, Car, Route y Payment. La composición va a significar una asociación entre estas clases con la diferencia de que para que esta clase pueda vivir forzosamente necesita a las demás. Es decir que estas clases son obligatorias para que la clase Trip pueda existir, esta dependencia obligatoria podríamos expresarla en el método constructor de la clase Trip, pues para que un objeto pueda ser creado dependerá de que los demás existan.
+
+Captura de pantalla 2019-01-24 a la(s) 1.46.08.png
+Esta clase Trip poseerá la lógica más fuerte del negocio aquí será donde se concentrarán la mayor cantidad de clases.
+
+Esto es todo nuestro diagrama de clases, que quedó totalmente expresado en nuestro proyecto.
 
 ***Clase 36 Conclusiones***
 
 ***Clase 37 Bonus: Qué es la Programación Orientada a Objetos***
+
+https://www.youtube.com/watch?v=Mi_sRAfs7TE
