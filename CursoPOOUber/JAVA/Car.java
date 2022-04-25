@@ -1,6 +1,11 @@
+/*vamos a colocar el atributo Integer passegenger como privado y queda así private Integer passegenger 
+se debe tener en cuenta que ese atributo no es visible para la clase Main pero para la clase Car si lo es
+por ejemplo en la línea 20 lo estoy imprimiendo y si lo puedo ver en consola
+*/
+
 class Car {
     Integer id;
-    Integer passegenger;
+    private Integer passegenger;
     String license;
     Account driver;
     /*String driver;*/
@@ -11,8 +16,30 @@ class Car {
     public Car(String, license, Account diver){
         this.license = license;
         this.driver = driver;
+        passegenger = 3
+        System.out.println("passenger: " + passegenger)
     }
     void printDataCar() {
-        System.out.println("License: " + license + "Driver: " + driver.name);
+        if(passegenger != null){
+            System.out.println("License: " + license + "Driver: " + driver.name);
+        }
     }
+
+    /*Getters y setters 
+    este nos sirve para accederlo y modificarlo pero únicamente dentro de esa clase y es así:
+    */
+
+    public Integer getPassenger(){
+        return passegenger
+    }
+
+    public void setPassenger(Integer passegenger) {
+        if(passegenger == 4){
+            this.passegenger = passegenger;
+        }else{
+            System.out.println("Necesitas 4 pasajeros")
+        }
+        
+    }
+
 }
